@@ -47,6 +47,9 @@ class PhpunitTestCommand(sublime_plugin.WindowCommand):
         if terminal_setting == 'iTerm':
             osascript_command += '"' + os.path.dirname(os.path.realpath(__file__)) + '/open_iterm.applescript"'
             osascript_command += ' "' + command + '"'
+        elif terminal_setting =='Hyper':
+            osascript_command += '"' + os.path.dirname(os.path.realpath(__file__)) + '/open_hyper.applescript"'
+            osascript_command += ' "' + command + '"'
         else:
             osascript_command += '"' + os.path.dirname(os.path.realpath(__file__)) + '/run_command.applescript"'
             osascript_command += ' "' + command + '"'
